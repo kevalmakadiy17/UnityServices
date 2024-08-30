@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Services Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">UNITY SERVICES</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">Home</a>
+            </li>
+           
+            <li class="navbar__item">
+                <a href="services.html" class="navbar__links">Services</a>
+            </li>
+          <li class="navbar__item">
+                <a href="aboutus.html" class="navbar__links">About</a>
+            </li>
+          <li class="navbar__item">
+                <a href="contactus.html" class="navbar__links">Contact Us</a>
+            </li>
+
+          <li class="navbar__item">
+                <a href="profile.html" class="navbar__links">Profile</a>
+            </li>
+          <!--
+         <button class="btnLogin-popup">LogIn</button> -->
+        </ul>
+    </div>
+  </nav> 
+  <!-- Hero Section-->
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Get Help Easy and Fast</h1>
+            <h2>All the Services that You Need</h2>
+            <p>Only Certified Services.</p>
+            <button class="main__btn"><a href="services.html">Find Services</a></button>
+        </div>
+        <div class="main__img--container">
+            <img src="https://cdn.glitch.global/db8fa927-aab7-43f7-bf5e-7d622c442233/pic1.jpg?v=1680576927468" alt="pic" id="main__img">
+        </div>
+    </div>
+  </div>
+
+<!-- Login Section-->
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+            
+        <div class="form-box login">
+            <h3>Log in</h3>
+            <from action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-open"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remeber me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a 
+                        href="#" class="register-link"> Register</a></p>
+                </div>
+             </from>
+        </div>
+
+        <div class="form-box register">
+            <h3>Registration</h3>
+            <from action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>First Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Last Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-open"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I agree to all terms and conditions</label>
+                    
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a 
+                        href="#" class="login-link"> LogIn</a></p>
+                </div>
+             </from>
+        </div>
+
+    </div>  
+
+
+
+  <script src="app.js"></script>  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

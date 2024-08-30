@@ -1,0 +1,96 @@
+.payment-form {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 30%;
+  margin: 25 auto 50 50;
+}
+
+.payment-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form label {
+  margin-bottom: 10px;
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="number"],
+.payment-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.payment-form input[type="text"]:focus,
+.payment-form input[type="email"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #7fc8ff;
+}
+
+.payment-form input[type="text"]:invalid,
+.payment-form input[type="email"]:invalid {
+  border: 2px solid #ff7f7f;
+}
+
+.payment-form input[type="text"]:valid,
+.payment-form input[type="email"]:valid {
+  border: 2px solid #7fff7f;
+}
+
+
+.payment-form input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #7fc8ff;
+}
+
+.payment-form input[type="number"]:invalid {
+  border: 2px solid #ff7f7f;
+}
+
+.payment-form input[type="number"]:valid {
+  border: 2px solid #7fff7f;
+}
+
+
+.payment-form input[type="text"][name="card"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  width: 150%;
+}
+
+
+.payment-form input[type="text"][name="expiry"],
+.payment-form input[type="text"][name="cvv"] {
+  width: 50%;
+}
+
+.payment-form .submit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.payment-form button[type="submit"] {
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-form button[type="submit"]:hover {
+  background-color: #218838;
+}

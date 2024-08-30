@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <link rel="stylesheet" href="style.css">
+<head>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">UNITY SERVICES</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+               <a href="index.html" class="navbar__links">Home</a>
+            </li>
+           
+            <li class="navbar__item">
+                <a href="services.html" class="navbar__links">Services</a>
+            </li>
+           <li class="navbar__item">
+                <a href="aboutus.html" class="navbar__links">About</a>
+            </li>
+            <li class="navbar__item">
+                <a href="contactus.html" class="navbar__links">Contact Us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="profile.html" class="navbar__links">Profile</a>
+            </li>
+          <!--
+          <button class="btnLogin-popup">LogIn</button> -->
+        </ul>
+    </div> 
+  </nav> 
+    <title>Customer Details</title>
+    <link rel="stylesheet" type="text/css" href="Cust_Page_Style.css">
+  </head>
+  <body>
+    <h1>Customer Details</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+       <!-- <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email"><br><br>
+     -->
+      <label for="address">Address:</label><br>
+      <input type="text" id="address" name="address" style="width: 45%; display: inline-block;" placeholder="Street address">
+      <input type="text" id="address2" name="address2" style="width: 45%; display: inline-block; margin-left: 10px;" placeholder="Apartment, suite, etc.">
+      <input type="text" id="address3" name="address3" style="width: 100%; display: inline-block;" placeholder="City, State, Zipcode"><br><br>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"><br><br>
+      <label for="photo">Profile Photo : </label>
+      <input type="file" id="photo" name="photo"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

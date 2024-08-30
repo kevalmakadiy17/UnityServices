@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css">
+<head>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">UNITY SERVICES</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+               <a href="index.html" class="navbar__links">Home</a>
+            </li>
+           
+            <li class="navbar__item">
+                <a href="services.html" class="navbar__links">Services</a>
+            </li>
+           <li class="navbar__item">
+                <a href="aboutus.html" class="navbar__links">About</a>
+            </li>
+          <li class="navbar__item">
+                <a href="contactus.html" class="navbar__links">Contact Us</a>
+            </li>
+           <!--
+          <li class="navbar__btn">
+                <a href="/index_afterlogin.html" class="button">After Login version</a>
+            </li>
+         <button class="btnLogin-popup">LogIn</button> 
+    -->        
+</ul>
+    </div> 
+  </nav> 
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>Unity Services Prototype</title>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="relative">
+            <input type="text" id="search-input" onkeyup="filterServices()" class="w-full p-2 pl-10 bg-white rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search services...">
+            <svg class="absolute top-3 left-3 w-6 h-6 text-gray-400" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <ul id="suggestion-list" class="hidden absolute w-full mt-1 bg-white rounded-md shadow-lg p-2">
+                <!-- Your services suggestions will be populated here -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        const services = [
+            "Web Development",
+            "Design",
+            "Mechanic",
+            "Photographer",
+            "Plumber",
+            "Translation",
+            "Videographer",
+            "Voice Over",
+            "Writing",
+            "IT Support"
+        ];
+
+        const input = document.getElementById('search-input');
+        const list = document.getElementById('suggestion-list');
+
+        function filterServices() {
+            const search = input.value.toLowerCase();
+            const suggestions = services.filter(service => service.toLowerCase().includes(search));
+
+            if (search.length > 0) {
+                list.innerHTML = suggestions.map(service => `<li class="p-2 hover:bg-gray-200 cursor-pointer">${service}</li>`).join('');
+                list.classList.remove('hidden');
+            } else {
+                list.classList.add('hidden');
+            }
+        }
+
+        input.addEventListener('focus', () => {
+            if (input.value.length > 0) {
+                list.classList.remove('hidden');
+            }
+        });
+
+        input.addEventListener('blur', () => {
+            setTimeout(() => list.classList.add('hidden'), 200);
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>Card Grid</title>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/webdevelopment.jpg?v=1680555064882" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Web Development</h3>
+                <p class="mt-2 text-gray-600">Web development involves the creation, design, and maintenance of websites and web applications. A skilled web developer can help you build a website that looks great, is easy to navigate, and meets your specific business needs.</p>
+                <a href="webdevelopment.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/design.jpg?v=1680554936368" alt="Card Title 2 Image">
+                <h3 class="text-xl font-semibold">Design</h3>
+                <p class="mt-2 text-gray-600">Looking for someone who can help you bring your vision to life? Look no further than our team of talented designers. Whether you need a new logo, website, or marketing materials, we can help you create a professional and polished look for your business.</p>
+                <a href="design.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/mechanic.jpg?v=1680554939742" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Mechanic</h3>
+                <p class="mt-2 text-gray-600">If you're in need of auto repair or maintenance services, our team of experienced mechanics has got you covered. From routine oil changes to more complex engine repairs, we can help keep your vehicle running smoothly and safely on the road.</p>
+                <a href="mechanic.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 4 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/photographer.jpg?v=1680554942315" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Photographer</h3>
+                <p class="mt-2 text-gray-600">Whether you're looking for wedding photography, headshots, or product photos, our team of skilled photographers can capture the perfect shot for you. With an eye for detail and a commitment to quality, we can help you capture the moment and create lasting memories.</p>
+                <a href="photographer.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 5 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/plumbing.jpg?v=1680554944355" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Plumber</h3>
+                <p class="mt-2 text-gray-600">Got a leaky faucet or a clogged drain? Our team of expert plumbers is here to help. With years of experience and the latest tools and technology, we can handle any plumbing issue, big or small.</p>
+                <a href="plumber.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 6 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/translation.jpg?v=1680554945801" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Translation</h3>
+                <p class="mt-2 text-gray-600">Need to communicate with clients or customers in a different language? Our team of professional translators can help you break down the language barrier and reach a wider audience. From document translation to interpretation services, we've got you covered.</p>
+                <a href="translation.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 7 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/videgrapger.jpg?v=1680554947471" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Videographer</h3>
+                <p class="mt-2 text-gray-600">Looking to create a high-quality video for your business or personal project? Our team of experienced videographers can help you bring your vision to life. From scriptwriting to filming to post-production, we can handle every aspect of the video production process.</p>
+                <a href="videographer.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 8 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/voiceover.jpg?v=1680554949010" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Voice Over</h3>
+                <p class="mt-2 text-gray-600">Looking for a professional voice actor to bring your project to life? Our team of talented voice over artists can provide the perfect voice for your video, commercial, or audio project. With years of experience and a commitment to quality, we can help you make an impact with your message.</p>
+                <a href="voiceover.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 9 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/writing.jpg?v=1680554950323" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">Writing</h3>
+                <p class="mt-2 text-gray-600">Need help crafting compelling content for your website, marketing materials, or other projects? Our team of talented writers can help you communicate your message with clarity and impact. From blog posts to white papers to ad copy, we can help you create content that resonates with your audience.</p>
+                <a href="writing.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          <!-- Card 10 -->
+            <div class="bg-white rounded-md shadow-lg p-4 flex flex-col">
+                <img class="h-40 w-full object-cover rounded-md mb-4" src="https://cdn.glitch.global/85d7d8fd-6896-409c-9553-6a1f802e8123/Itsupport?v=1679555732850" alt="Card Title 1 Image">
+                <h3 class="text-xl font-semibold">IT Support</h3>
+                <p class="mt-2 text-gray-600">Struggling with computer issues or network problems? Our team of experienced IT professionals can help you diagnose and solve any tech issues you're facing. From hardware upgrades to software installation to security solutions, we've got the knowledge and expertise to keep your systems running smoothly.</p>
+                <a href="itsupport.html" class="mt-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">See the Providers</a>
+            </div>
+          
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+  
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* General styles */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+header {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.hero {
+	background-image: url('https://cdn.glitch.com/26951c2e-5f8d-4b6d-a191-7d963aa47e19%2Fhero.jpg?v=1620089257637');
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	text-align: center;
+}
+
+.content {
+	margin: 50px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+  color: #000000;
+}
+
+p {
+	margin: 20px 0;
+  color: #000000;
+}
+
+.btn {
+	background-color: #333333;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #444444;
+}
+
+/* Form styles */
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 600px) {
+	header {
+		padding: 5px;
+	}
+	
+	nav ul {
+		flex-direction: column;
+	}
+	
+	nav li {
+		margin: 10px 0;
+	}
+	
+	.hero {
+		height: 200px;
+	}
+	
+	h1 {
+		font-size: 2em;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+    color: #000000;
+	}
+}
+
+.navbar{
+    background: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo{    /*LOGO*/
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#a0d1f1 0%, #517bdc 100%); /*LOGO Color*/
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;  /*Brings to the center of the black background*/
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.8rem;  /*LOGO Size*/
+} 
